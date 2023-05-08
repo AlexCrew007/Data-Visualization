@@ -1,0 +1,46 @@
+
+.chartBox {
+  margin-bottom: 40px; /* Adds 20 pixels of margin below each chart */
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.header h1{
+    padding: 2% 2%;
+    font-size: 50px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    text-align: center;
+    -webkit-background-clip: text;
+  }
+
+
+.container{
+    padding: 2%;
+}
+
+input[type="text"] {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px #007bff;
+}

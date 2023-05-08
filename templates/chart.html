@@ -1,0 +1,97 @@
+<script>
+const data={
+            labels: {{ country | safe}},
+                  datasets: [{
+                  label: 'Intensity Vs Country',
+                  data: {{lst| safe}},
+                  borderWidth: 1
+                }]
+            };
+const datapie={
+              labels: {{country | safe}},
+                datasets: [{
+                  label: 'Country Vs Occurences',
+                  data: {{ country_count | safe}},
+                  borderWidth: 1
+                }]
+            };
+const data_bar={
+              labels: {{ region | safe}},
+                datasets: [{
+                  label: 'Region Vs Relevance',
+                  data: {{relevance| safe}},
+                  borderWidth: 1
+                }]
+            };
+const datalineChart={
+              labels: {{region | safe}},
+                datasets: [{
+                  label: 'Region Vs Topics',
+                  data: {{topic_val| safe}},
+                  borderWidth: 1
+                }]
+            };
+const config={
+              type: 'bar',
+              data,
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            };
+const config2={
+              type: 'pie',
+              data:datapie,
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            };
+const config3={
+              type: 'bar',
+              data:data_bar,
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            };
+const config4={
+              type: 'line',
+              data:datalineChart,
+              options: {
+                scales: {
+                  y: {
+                      beginAtZero: true
+                          }
+                        }
+                      }
+                    };
+  
+const myChart = new Chart(
+                      document.getElementById('myChart'),
+                      config
+                    );
+  
+const pie = new Chart(
+                      document.getElementById('pie'),
+                      config2
+                    );
+            
+const bar_chart = new Chart(
+                      document.getElementById('bar_chart'),
+                      config3
+                    );
+const lineChart = new Chart(
+                      document.getElementById('lineChart'),
+                      config4
+                    );
+</script>
